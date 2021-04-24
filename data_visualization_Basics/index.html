@@ -9,12 +9,11 @@
         overflow: hidden;
       }
     </style>
+    <!--Adding React with the unpkg https://unpkg.com/browse/react@17.0.2/ ->umd->https://unpkg.com/browse/react@17.0.2/umd/react.production.min.js the raw version url-->
+    <!--><script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>-->
   </head>
   <body>
-    <!-- for face r= r- height/2 - stroke-width/2
-     for eyes left r= r- centerX - eyeoffsetX
-     for eyes right r= r- centerX + eyeoffsetX
-    -->
+    <script src="./bundle.js"></script>
     <svg width="960" height="500">
       <circle
       cx="480"
@@ -38,6 +37,14 @@
       >
       </circle>
     </svg>
+
+    <!--<script>
+       console.log(React);// can see all the exports of React
+
+    </script>-->
+    <!-- for face r= r- height/2 - stroke-width/2
+     for eyes left r= r- centerX - eyeoffsetX
+     for eyes right r= r- centerX + eyeoffsetX-->
 
   </body>
 </html>

@@ -1,4 +1,4 @@
-
+### Open smiley face by opening index.html
 # Data Visualization
 
 * The transition from cognition to perception.
@@ -86,4 +86,24 @@ but svg have more scaling aspect than Raster.
 
 * React helps to make complex interactive systems that is not possible with D3 alone.
 
-57 timestamp
+# Difference in CDN and NPM install
+
+#### We usually use npm when working with node.js backend server side.
+#### For client side i.e browser side Data Visualizion projects we can Use CDN's
+
+### Content Distribution Network(CDN)
+
+- Efficient way to getting the files to the browser.
+- Instead of only single server like npm hosting all packages in CDN multiple server can provide the CDN for the requirements by just including the script tag and passing the CDN url.
+
+## UNPKG
+
+- Is an open source content delivery network for everything on npm use it to load any package by just the url.
+
+- ****unpkg.com/:package@:version/:file****
+
+- you just have to specify package version and file.
+
+## rollup.js
+
+- Roll up is module bundler basically combines bunch of javascript modules it understands latest JSX.
