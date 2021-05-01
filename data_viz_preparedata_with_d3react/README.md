@@ -1,8 +1,7 @@
 ****By- Jasmeet****
 
+timestamp- 257 loading data in react
 ****Credits/SRC: https://datavis.tech/datavis-2020/****
-
-Timestamp:229
 
 # Data Visualization Project-1
 ## Aim-> Making a data visualization for all available Named CSS colors in mdn.
@@ -11,7 +10,7 @@ Timestamp:229
 
 ### -Preparing Data For Data Visualization
 ### -Loading Data with fetch, promises , async & await
-
+### -Interaction With React
 
 # Part-1 : Preparing Data for Data visualization with d3 and React
 
@@ -49,6 +48,8 @@ Timestamp:229
 - ****Click on Raw  and then that url can be used to just use this csv values to load data in our project****
 
 ***End Of part 1***
+
+***
 ***
 # Part-2 : Loading Data with fetch, promises, async&await
 
@@ -89,6 +90,9 @@ Timestamp:229
 
 
 ****part 2 ends here****
+***
+***
+
 # Part 3 Interaction With React
 
 ## Aim - draw a circle around the mouse pointer and that circle moves as you move your mouse.
@@ -97,6 +101,43 @@ Timestamp:229
 ### -Unidirectional data flow
 ### -the notion of state
 ### -React use state hook
+
+- ****IMPORTANT Unidirectional data flow in react is the process of****
+
+
+      render--->precption & cognition ---> to action(interaction) via event listener---->change state & re-render via react-virtual DOM
+
+- ****IMPORTANT: to handle the change in state react has useState hooks refer App.js in src****
+
+***
+
+# Parsing CSV data with D3
+
+#### NOTE- refer parsing_csv.html in the data_viz folder
+
+## AIM
+
+#### - counting rows and columns
+#### - estimating data size
+#### - constructing and displaying text with d3 and css
+#### - using d3.csv,csvParse & csvFormat
+
+
+     d3.csvParse("foo,bar\n1,2");
+     // [{foo:"1",bar:"2"},columns["foo","bar"]]
+
+     d3.tsvParse("foo\tbar\n1\t2");
+     // [{foo:"1",bar:"2"},columns["foo","bar"]]
+
+     npm i d3
+
+     const d3 =require('d3');
+     const csvurl='https://gist.githubusercontent.com/Jasmeet-1998/b4d5aca16012ed8cf5da1eb955c65210/raw/cssNamedColorsByMDN.csv'
+     fetchText(csvUrl).then(text=>{
+       console.log(d3.csvParse(text));
+       })
+
+
 
 
 ***

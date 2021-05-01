@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Parsing CSV data with D3</title>
+    <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+  </head>
+  <body>
+    <pre id="message-container"></pre>
+    <style media="screen">
+      pre{
+        font-size:3em;
+      }
+    </style>
+    <script>
+      const csvurl='https://gist.githubusercontent.com/Jasmeet-1998/b4d5aca16012ed8cf5da1eb955c65210/raw/cssNamedColorsByMDN.csv';
+      d3.csv(csvurl).then(data=>{
+        let message='This is Summary of Parsed CSV data of CSS NAMED COLOURS.csv : \n';
+        console.log(data);// getting csv parsed data via d3 as array objects with each index of array representing a single row entry.
+        message=message+ Math.round(d3.csvFormat(data).length/1024) + ' kB\n'; // d3.csvFormat is used to unparse the data
+        message=message+ data.length+' rows\n'; // number of rows in the csv data
+        message=message+ data.columns.length+' columns\n'; // number of columns in the csv data
+        document.getElementById('message-container').textContent=message;
+      });
+    </script>
+
+  </body>
+</html>
